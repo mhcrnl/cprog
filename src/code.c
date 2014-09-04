@@ -70,18 +70,17 @@ int main (int argc, char *argv[])
     exit(1);
   }
 
-  char dirname[6][300];
+  char dirname[5][300];
 
   sprintf(dirname[1] ,"%s", argv[arg]);
   sprintf(dirname[2] ,"%s/src", argv[arg]);
   sprintf(dirname[3] ,"%s/build", argv[arg]);
   sprintf(dirname[4] ,"%s/man", argv[arg]);
-  sprintf(dirname[5] ,"%s/lic", argv[arg]);
 
   if (optionsilent == 1)
     printf("Creating:\n");
 
-  for (count=1;count<6;count++) {
+  for (count=1;count<5;count++) {
     if (mkdir(dirname[count], 0775) != 0) {
       perror("Error");
       exit(1);
@@ -118,13 +117,8 @@ int main (int argc, char *argv[])
   if (optionsilent == 1)
     printf("%s\n", filename);
 
-  sprintf(filename ,"%s/lic/GNU-GPL", argv[arg]);
+  sprintf(filename ,"%s/LICENSE", argv[arg]);
   gnu(filename);
-  if (optionsilent == 1)
-    printf("%s\n", filename);
-
-  sprintf(filename ,"%s/lic/LICENSE", argv[arg]);
-  license(filename);
   if (optionsilent == 1)
     printf("%s\n", filename);
 
