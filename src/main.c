@@ -92,7 +92,7 @@ int main (int argc, char *argv[])
 
   char filename[300];
 
-  sprintf(filename ,"%s/src/code.c", argv[arg]);
+  sprintf(filename ,"%s/src/main.c", argv[arg]);
   mainfile(filename);
   if (optionsilent == 1)
     printf("%s\n", filename);
