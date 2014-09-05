@@ -1,7 +1,7 @@
 # variables
 
 CC = gcc
-OBJ = build/code.o build/output.o build/files/authors.o build/files/gnu.o build/files/license.o build/files/main.o build/files/makefile.o build/files/changelog.o build/files/configure.o
+OBJ = build/code.o build/output.o build/files/authors.o build/files/gnu.o build/files/license.o build/files/main.o build/files/makefile.o build/files/changelog.o build/files/configure.o build/files/dontreadme.o
 CFLAGS = -Wall
 DEPS =
 
