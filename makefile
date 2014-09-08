@@ -17,3 +17,7 @@ build/%.o: src/%.c $(DEPS)
 
 install:
 	install -m 0755 -o root -g root cprog /usr/bin/cprog
+
+clean:
+	rm -f cprog
+	find build -name *.o -exec rm -f {} \;
