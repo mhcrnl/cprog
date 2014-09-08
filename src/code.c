@@ -14,6 +14,7 @@ void gnu(char *filename);
 void license(char *filename);
 void mainfile(char *filename);
 void makefile(char *filename, char *projectname);
+void gitignore(char *filename);
 
 int main (int argc, char *argv[])
 {
@@ -125,6 +126,11 @@ int main (int argc, char *argv[])
 
   sprintf(filename ,"%s/lic/LICENSE", argv[arg]);
   license(filename);
+  if (optionsilent == 1)
+    printf("%s\n", filename);
+
+  sprintf(filename ,"%s/.gitignore", argv[arg]);
+  gitignore(filename);
   if (optionsilent == 1)
     printf("%s\n", filename);
 
