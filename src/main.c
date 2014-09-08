@@ -74,6 +74,12 @@ int main (int argc, char *argv[])
     exit(1);
   }
 
+
+  if (strstr(argv[arg], "/") != NULL) {
+    printf("Error: no path allowed, please cd into the directory\n");
+    exit(1);
+  }
+
   char dirname[5][300];
 
   sprintf(dirname[1] ,"%s", argv[arg]);
