@@ -17,6 +17,7 @@ void makefile(char *filename, char *projectname);
 void readme(char *filename, char *projectpath);
 void dontreadme(char *filename);
 void manpage(char *filename, char *projectname);
+void gitignore(char *filename);
 
 int main (int argc, char *argv[])
 {
@@ -147,6 +148,11 @@ int main (int argc, char *argv[])
 
   sprintf(filename ,"%s/man/%s.8", argv[arg], argv[arg]);
   manpage(filename, argv[arg]);
+  if (optionsilent == 1)
+    printf("%s\n", filename);
+
+  sprintf(filename ,"%s/.gitignore", argv[arg]);
+  gitignore(filename);
   if (optionsilent == 1)
     printf("%s\n", filename);
 
