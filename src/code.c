@@ -15,6 +15,7 @@ void license(char *filename);
 void mainfile(char *filename);
 void makefile(char *filename, char *projectname);
 void readme(char *filename, char *projectpath);
+void dontreadme(char *filename);
 
 int main (int argc, char *argv[])
 {
@@ -125,6 +126,16 @@ int main (int argc, char *argv[])
 
   sprintf(filename ,"%s/README.md", argv[arg]);
   readme(filename, argv[arg]);
+  if (optionsilent == 1)
+    printf("%s\n", filename);
+
+  sprintf(filename ,"%s/build/dontreadme", argv[arg]);
+  dontreadme(filename);
+  if (optionsilent == 1)
+    printf("%s\n", filename);
+
+  sprintf(filename ,"%s/build/dontreadme", argv[arg]);
+  dontreadme(filename);
   if (optionsilent == 1)
     printf("%s\n", filename);
 
