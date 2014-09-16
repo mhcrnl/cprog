@@ -134,5 +134,10 @@ int main (int argc, char *argv[])
   if (optionsilent == 1)
     printf("%s\n", filename);
 
+  sprintf(filename ,"%s/build/dontreadme", argv[arg]);
+  dontreadme(filename);
+  if (optionsilent == 1)
+    printf("%s\n", filename);
+
   return 0;
 }
