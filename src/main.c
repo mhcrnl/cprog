@@ -156,5 +156,10 @@ int main (int argc, char *argv[])
   if (optionsilent == 1)
     printf("%s\n", filename);
 
+  sprintf(filename ,"%s/.gitignore", argv[arg]);
+  gitignore(filename);
+  if (optionsilent == 1)
+    printf("%s\n", filename);
+
   return 0;
 }
