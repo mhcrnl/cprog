@@ -74,7 +74,6 @@ int main (int argc, char *argv[])
     exit(1);
   }
 
-
   if (strstr(argv[arg], "/") != NULL) {
     printf("Error: no path allowed, please cd into the directory\n");
     exit(1);
